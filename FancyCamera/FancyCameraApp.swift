@@ -1,6 +1,6 @@
 //
-//  AnimeCameraApp.swift
-//  AnimeCamera
+//  FancyCameraApp.swift
+//  FancyCamera
 //
 //  Created by 김민재 on 2022/08/30.
 //

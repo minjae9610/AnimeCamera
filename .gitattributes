@@ -1,0 +1,8 @@
+FancyCamera/Models/fast-neural-style-transfer-mosaic.mlmodel filter=lfs diff=lfs merge=lfs -text
+FancyCamera/Models/fast-neural-style-transfer-starry-night.mlmodel filter=lfs diff=lfs merge=lfs -text
+FancyCamera/Models/photo2cartoon.mlmodel filter=lfs diff=lfs merge=lfs -text
+FancyCamera/Models/anime2sketch.mlmodel filter=lfs diff=lfs merge=lfs -text
+FancyCamera/Models/animegan2face_paint_512_v2.mlmodel filter=lfs diff=lfs merge=lfs -text
+FancyCamera/Models/animeganHayao.mlmodel filter=lfs diff=lfs merge=lfs -text
+FancyCamera/Models/animeganPaprika.mlmodel filter=lfs diff=lfs merge=lfs -text
+FancyCamera/Models/fast-neural-style-transfer-cuphead.mlmodel filter=lfs diff=lfs merge=lfs -text
