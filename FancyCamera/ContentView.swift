@@ -12,8 +12,10 @@ struct ContentView: View {
     @State var isImagePickerShow = false
     @State private var isFilterSelected = false
     @State private var showsAlert = false
+
     @State var images: [UIImage] = []
-    @State private var selectedModel: StyleModel = .필터
+    @State var shareImage: ShareImage?
+    @State private var selectedModel: StyleModel = .Filter
     @State private var transferImage: UIImage?
     
     var body: some View {
@@ -49,7 +51,7 @@ struct ContentView: View {
 
             Spacer()
 
-            Picker("필터 선택", selection: $selectedModel) {
+            Picker("Select Filter", selection: $selectedModel) {
                 ForEach(StyleModel.allCases, id: \.self) { model in
                     Text(model.rawValue)
                 }
@@ -69,28 +71,55 @@ struct ContentView: View {
             HStack {
                 Spacer()
 
-                Button("사진 찍기") {
-                    self.isCameraPickerShow.toggle()
+                Button(action: {
+                        self.isCameraPickerShow.toggle()
+                }) {
+                    Image(systemName: "camera")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 24, height: 24)
                 }
 
                 Spacer()
 
-                Button("이미지 선택") {
+                Button(action: {
                     self.isImagePickerShow.toggle()
+                }) {
+                    Image(systemName: "photo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 24, height: 24)
                 }
 
                 Spacer()
 
                 if !images.isEmpty {
 
-                    Button("이미지 저장") {
+                    Button(action: {
                         ImageSaver.saveTransferImage(transferImage: transferImage)
                         self.showsAlert.toggle()
+                    }) {
+                        Image(systemName: "square.and.arrow.down")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 24, height: 24)
                     }
                     .disabled(transferImage == nil)
                     .alert(isPresented: self.$showsAlert) {
-                        Alert(title: Text("이미지가 앨범에 저장되었습니다."))
+                        Alert(title: Text("Image Saved"))
                     }
+
+                    Spacer()
+
+                    Button(action: {
+                        self.shareImage = ShareImage(image: transferImage!)
+                    }) {
+                        Image(systemName: "square.and.arrow.up")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 24, height: 24)
+                    }
+                    .disabled(transferImage == nil)
 
                     Spacer()
                 }
@@ -103,7 +132,7 @@ struct ContentView: View {
                 .onDisappear() {
                     withAnimation{
                         transferImage = nil
-                        selectedModel = .필터
+                        selectedModel = .Filter
                     }
                 }
         })
@@ -112,9 +141,12 @@ struct ContentView: View {
                 .onDisappear() {
                     withAnimation{
                         transferImage = nil
-                        selectedModel = .필터
+                        selectedModel = .Filter
                     }
                 }
+        }
+        .sheet(item: $shareImage) { shareImage in
+            ActivityView(image: shareImage.image)
         }
     }
 }

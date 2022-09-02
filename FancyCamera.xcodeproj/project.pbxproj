@@ -13,6 +13,7 @@
 		C1DA692A28BDD96F008992CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1DA692928BDD96F008992CF /* Assets.xcassets */; };
 		C1DA692D28BDD96F008992CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1DA692C28BDD96F008992CF /* Preview Assets.xcassets */; };
 		C1DE432D28C0AE69005E80BC /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DE432C28C0AE69005E80BC /* CameraPicker.swift */; };
+		C1DE433028C1CA76005E80BC /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DE432F28C1CA76005E80BC /* ShareView.swift */; };
 		C1E8F80228BF31C80054BE74 /* animeganHayao.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C1E8F80128BF31C80054BE74 /* animeganHayao.mlmodel */; };
 		C1E8F80528BF322D0054BE74 /* ImageTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8F80428BF322D0054BE74 /* ImageTransfer.swift */; };
 		C1E8F81928BF47A00054BE74 /* fast-neural-style-transfer-cuphead.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C1E8F80C28BF478A0054BE74 /* fast-neural-style-transfer-cuphead.mlmodel */; };
@@ -33,6 +34,7 @@
 		C1DA692928BDD96F008992CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1DA692C28BDD96F008992CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C1DE432C28C0AE69005E80BC /* CameraPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
+		C1DE432F28C1CA76005E80BC /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 		C1E8F80128BF31C80054BE74 /* animeganHayao.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = animeganHayao.mlmodel; sourceTree = "<group>"; };
 		C1E8F80428BF322D0054BE74 /* ImageTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransfer.swift; sourceTree = "<group>"; };
 		C1E8F80C28BF478A0054BE74 /* fast-neural-style-transfer-cuphead.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "fast-neural-style-transfer-cuphead.mlmodel"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				C1DE432C28C0AE69005E80BC /* CameraPicker.swift */,
 				C12BCBAF28BDF25B0038FBFB /* ImagePicker.swift */,
 				C1E8F80428BF322D0054BE74 /* ImageTransfer.swift */,
+				C1DE432F28C1CA76005E80BC /* ShareView.swift */,
 				C1E8F82628BF4D0A0054BE74 /* ImageSaver.swift */,
 				C1E8F80328BF31DB0054BE74 /* Models */,
 				C1DA692928BDD96F008992CF /* Assets.xcassets */,
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1DE433028C1CA76005E80BC /* ShareView.swift in Sources */,
 				C12BCBB028BDF25B0038FBFB /* ImagePicker.swift in Sources */,
 				C1DA692828BDD96C008992CF /* ContentView.swift in Sources */,
 				C1E8F81C28BF47A00054BE74 /* fast-neural-style-transfer-starry-night.mlmodel in Sources */,
@@ -327,8 +331,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "사진을 찍고 싶습니다.";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "변환된 이미지를 저장하고 싶습니다.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera usage permission";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Need photo library usage permission";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -363,8 +367,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "사진을 찍고 싶습니다.";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "변환된 이미지를 저장하고 싶습니다.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera usage permission";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Need photo library usage permission";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

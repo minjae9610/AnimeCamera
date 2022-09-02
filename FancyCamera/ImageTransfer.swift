@@ -11,7 +11,7 @@ import VideoToolbox
 
 
 enum StyleModel: String, CaseIterable {
-    case 필터
+    case Filter
     case Hayao
     case Paprika
     case FacePaint
@@ -55,7 +55,7 @@ func imageToAnime(inputImage: CGImage, cgImage: inout CGImage?, selectedModel: S
     config.computeUnits = .all
 
     switch selectedModel {
-    case .필터:
+    case .Filter:
         break
         
     case .Hayao:
