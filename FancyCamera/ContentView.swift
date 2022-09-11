@@ -26,24 +26,21 @@ struct ContentView: View {
                 if let selectedImage = images[0] {
                     Image(uiImage: selectedImage)
                         .resizable()
-                        .scaledToFill()
-                        .frame(width: UIScreen.main.bounds.size.width * 0.7, height: UIScreen.main.bounds.size.width * 0.7)
+                        .scaledToFit()
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .padding()
                 }
 
                 if isFilterSelected {
-                    Image(systemName: "x.square")
+                    Image(systemName: "rectangle.2.swap")
                         .resizable()
-                        .scaledToFill()
-                        .frame(width: UIScreen.main.bounds.size.width * 0.7, height: UIScreen.main.bounds.size.width * 0.7)
+                        .scaledToFit()
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .padding()
                 } else if let transferImage = transferImage {
                     Image(uiImage: transferImage)
                         .resizable()
-                        .scaledToFill()
-                        .frame(width: UIScreen.main.bounds.size.width * 0.7, height: UIScreen.main.bounds.size.width * 0.7)
+                        .scaledToFit()
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .padding()
                 }
